@@ -10,13 +10,9 @@ export const ReviewContent: React.FC<ReviewContentProps> = ({
   content,
 }) => {
   return (
-    <div className="w-full mt-4 max-md:max-w-full">
-      <h3 className="text-[#1A011E] text-base tracking-[-0.32px] max-md:max-w-full">
-        {title}
-      </h3>
-      <p className="text-[#808080] text-sm leading-[18px] tracking-[-0.28px] mt-2 max-md:max-w-full">
-        {content}
-      </p>
+    <div className="flex flex-col gap-2">
+      <h3 className="text-gray-900 font-medium">{title}</h3>
+      <p className="text-gray-600 text-sm leading-relaxed">{content}</p>
     </div>
   );
 };

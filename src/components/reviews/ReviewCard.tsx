@@ -6,7 +6,7 @@ import { ReviewFooter } from "./ReviewFooter";
 interface ReviewCardProps {
   userImage: string;
   username: string;
-  ratingImage: string;
+  rating: number;
   title: string;
   content: string;
   productName: string;
@@ -15,18 +15,18 @@ interface ReviewCardProps {
 export const ReviewCard: React.FC<ReviewCardProps> = ({
   userImage,
   username,
-  ratingImage,
+  rating,
   title,
   content,
   productName,
 }) => {
   return (
-    <article className="justify-center items-stretch border-b-[color:var(--Grey-2,#E6E6E6)] flex w-full flex-col pt-2 pb-6 border-b border-solid max-md:max-w-full">
-      <div className="flex w-full flex-col items-stretch max-md:max-w-full">
+    <article className="bg-white rounded-lg p-6 border border-gray-100">
+      <div className="flex flex-col gap-4">
         <ReviewHeader
           userImage={userImage}
           username={username}
-          ratingImage={ratingImage}
+          rating={rating}
         />
         <ReviewContent title={title} content={content} />
       </div>
